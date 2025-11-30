@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wayang Classification</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Wayang Classification</h1>
+            <p>Upload gambar wayang untuk diklasifikasikan</p>
+        </header>
+
+        <div class="upload-section">
+            <div class="upload-area" id="uploadArea">
+                <input type="file" id="imageInput" accept="image/*" hidden>
+                <div class="upload-placeholder">
+                    <span>📁</span>
+                    <p>Klik atau drop gambar wayang di sini</p>
+                    <small>Format: JPG, PNG (Maks. 5MB)</small>
+                </div>
+                <img id="previewImage" style="display: none;">
+            </div>
+            
+            <button id="predictBtn" disabled>Klasifikasikan</button>
+        </div>
+
+        <div class="result-section" id="resultSection" style="display: none;">
+            <h2>Hasil Klasifikasi</h2>
+            <div class="result-card">
+                <div class="prediction">
+                    <span class="wayang-name" id="wayangName">-</span>
+                    <span class="confidence" id="confidence">-</span>
+                </div>
+                <div class="probabilities" id="probabilities">
+                    <!-- Probabilities will be populated here -->
+                </div>
+            </div>
+        </div>
+
+        <div class="loading" id="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Sedang memproses...</p>
+        </div>
+
+        <div class="wayang-info">
+            <h3>Jenis Wayang yang Dikenali:</h3>
+            <div class="wayang-list">
+                <div class="wayang-item">GARENG</div>
+                <div class="wayang-item">SEMAR</div>
+                <div class="wayang-item">PETRUK</div>
+                <div class="wayang-item">BAGONG</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
