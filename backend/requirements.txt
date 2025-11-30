@@ -1,0 +1,9 @@
+tensorflow-cpu==2.10.0
+flask==2.3.3
+flask-cors==4.0.0
+gunicorn==21.2.0
+numpy==1.21.6
+Pillow==9.3.0
+scikit-learn==1.0.2
+opencv-python-headless==4.6.0.66
+matplotlib==3.5.3
